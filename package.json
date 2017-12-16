@@ -1,0 +1,20 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Membuat template node js menggunakan express js dan bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adanSource",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^1.0.0",
+    "express": "^4.16.2",
+    "mysql2": "^1.5.1",
+    "routes": "^2.1.0",
+    "sequelize": "^4.28.2",
+    "vue": "^2.5.11"
+  }
+}

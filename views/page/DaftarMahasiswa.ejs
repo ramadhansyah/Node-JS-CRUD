@@ -1,0 +1,42 @@
+<% include ../template/header %>
+<div class="container">
+	<div class="starter-template">
+	    <div class="row">
+		    <div class="panel panel-default">
+		    	<div class="panel-body">
+				  	<legend><h4><%= title %></h4> </legend>
+				  	<div class="pull-right"><a href="/mahasiswa/add"><i class="glyphicon glyphicon-plus"></i> Tambah Mahasiswa</a></div>
+				    <table class="table table-striped">
+					    <thead>
+					      <tr>
+					        <th width="10">No</th>
+					        <th>Nim</th>
+					        <th>Nama</th>
+					        <th>Email</th>
+					        <th>No.HP/telpon</th>
+					        <th width="90" class="text-center"></th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					    	<% var no=1; data.forEach((data) => { %>
+						      <tr>
+						        <td><%= no %></td>
+						        <td><%= data.nim %></td>
+						        <td><%= data.nama %></td>
+						        <td><%= data.email %></td>
+						        <td><%= data.no_hp %></td>
+						        <td align="center" >
+						        	<a href=""><i class="glyphicon glyphicon-trash text-danger"></i></a> |
+						        	<a href=""><i class="glyphicon glyphicon-edit text-success"></i></a>
+						        </td>
+						      </tr>
+						    <% no++; }) %>
+					    </tbody>
+					</table>
+				</div>
+			</div>
+	    </div>
+    </div>
+
+</div><!-- /.container -->
+<% include ../template/footer %>
