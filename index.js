@@ -13,13 +13,9 @@ app.set('view engine', 'ejs');
 var mahasiswaRouter = require('./controllers/mahasiswa');
 app.use('/mahasiswa',mahasiswaRouter);
 app.get('/', (req, res)=> {
-	var data = [
-        { name: 'Bloody Mary', drunkness: 3 },
-        { name: 'Martini', drunkness: 5 },
-        { name: 'Scotch', drunkness: 10 }
-    ];
-    console.log(data);
-    res.render('page/beranda',{data:data});
+	
+    
+    res.render('page/beranda');
 });
 app.use('*',(req,res)=>{
 	res.render('page/note_found');
