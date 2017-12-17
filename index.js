@@ -1,8 +1,11 @@
-var express = require("express");
+var express 	= require("express");
+var bodyParse 	= require('body-parser');
 var app 	= express();
 var router 	= express.Router();
-var db 			= require('./models/db').db;
+var db 		= require('./models/db').db;
 
+app.use(bodyParse.urlencoded({ extended: true }))
+app.use(bodyParse.json())
 app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/node_modules'));
 /*set Template Egine */
